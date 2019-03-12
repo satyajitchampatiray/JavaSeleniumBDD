@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh "chmod +x src/main/resources/drivers/chromedriverlinux"
         sh "mvn test"
-        sh "nohup allure serve allure-results --port 3000 &"
+        sh "nohup /opt/allure/bin/allure serve allure-results --port 3000 &"
       }
     }     
   }
